@@ -3,7 +3,7 @@
 
 ### Introduction
 
-Demo Project for Piraso.
+Demo project for Piraso.
 
 To learn more please see http://www.piraso.org/.
 
