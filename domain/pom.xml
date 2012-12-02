@@ -115,12 +115,12 @@
     </dependency>
     <dependency>
       <groupId>com.piraso</groupId>
-      <artifactId>quizler-core</artifactId>
+      <artifactId>piraso-demo-core</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
       <groupId>com.piraso</groupId>
-      <artifactId>quizler-core</artifactId>
+      <artifactId>piraso-demo-core</artifactId>
       <version>${project.version}</version>
       <type>test-jar</type>
       <scope>test</scope>
