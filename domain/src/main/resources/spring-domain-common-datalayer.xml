@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd"
+       default-lazy-init="false" default-dependency-check="none"
+       default-autowire="no">
+
+  <bean id="commonDataSourceSelector" class="com.piraso.core.dbmigrator.SingleDataSourceSelector">
+    <constructor-arg ref="commonDataSource"/>
+  </bean>
+
+  <bean id="commonMigrationResolver" class="com.piraso.core.dbmigrator.DefaultResourceMigrationResolver"/>
+  <bean id="commonVersionStrategy" class="com.carbonfive.db.migration.SimpleVersionStrategy"/>
+
+  <bean id="commonMigrationManager" class="com.piraso.core.dbmigrator.SingleDataSourceMigrationManager"
+        init-method="migrate">
+    <property name="dataSourceSelector" ref="commonDataSourceSelector"/>
+    <property name="migrationResolver" ref="commonMigrationResolver"/>
+    <property name="versionStrategy" ref="commonVersionStrategy"/>
+    <property name="domain" value="common"/>
+    <property name="testContext" ref="testContext"/>
+  </bean>
+
+  <bean id="accountDao" class="com.piraso.domain.common.dao.AccountDaoImpl"
+        parent="commonBaseDao"/>
+
+</beans>
