@@ -1,0 +1,5 @@
+<resource name="jdbc/piraso" auth="Container" type="javax.sql.DataSource">
+  <param name="username" value="piraso" />
+  <param name="password" value="piraso" />
+  <param name="url" value="jdbc:cloudbees://piraso" />
+</resource>
