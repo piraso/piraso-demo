@@ -33,6 +33,10 @@ log4j.logger.org.springframework=INFO
 log4j.logger.com.carbonfive=INFO
 </pre>
 
+        <div class="alert alert-info">
+            The <a target="_blank" href="https://github.com/alvinrdeleon/piraso-demo/blob/master/web/src/main/resources/log4j.properties">log4j.properties</a> class can also be seen on Github.
+        </div>
+
     </div>
     <div id="log4j-logging">
         <h3>Logging code snippet</h3>
@@ -77,5 +81,9 @@ log4j.logger.com.carbonfive=INFO
         return String.format("log4j.%s.logs", type);
     }
 </pre>
+
+    <div class="alert alert-info">
+        The <a target="_blank" href="https://github.com/alvinrdeleon/piraso-demo/blob/master/web/src/main/java/org/piraso/demo/controller/log4j/Log4jController.java">Log4jController.java</a> class can also be seen on Github.
+    </div>
     </div>
 </section>
