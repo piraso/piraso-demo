@@ -20,6 +20,7 @@
                             <li><a href="<c:url value='/log4j/'><c:param name="type" value="debug"/></c:url>"><fmt:message key="log4j.debug.title"/></a></li>
                             <li><a href="<c:url value='/log4j/'><c:param name="type" value="error"/></c:url>"><fmt:message key="log4j.error.title"/></a></li>
                             <li><a href="<c:url value='/log4j/'><c:param name="type" value="security"/></c:url>"><fmt:message key="log4j.security.title"/></a></li>
+                            <li><a href="<c:url value='/log4j/'><c:param name="type" value="org"/></c:url>"><fmt:message key="log4j.org.title"/></a></li>
                         </ul>
                     </li>
                 </ul>

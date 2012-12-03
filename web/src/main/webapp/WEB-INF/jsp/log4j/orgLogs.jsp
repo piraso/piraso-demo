@@ -24,21 +24,32 @@
             <h3>Monitor Results</h3>
 
             <p>
-                <img src="<c:url value="/assets/img/log4j-security.png"/>">
+                <img src="<c:url value="/assets/img/log4j-thirdparty.png"/>">
             </p>
 
             <div class="alert alert-info">
-                Take note that no <code>TRACE</code>, <code>DEBUG</code> entries are logged from the monitor.
-                And only for <code>demo.security</code> log entries are available.
+                Only for <code>org</code> log entries are available with <code>TRACE</code> logging levels and <code>demo</code> log entries with <code>INFO</code> logging levels
+                with stack trace.
             </div>
+
+
+            <h3>Log4j View</h3>
+
+            <p>
+                Try clicking on the any log entries and click on <code>Stacktrace</code> to see the log entry stack trace.
+                Clicking on <img src="<c:url value='/assets/img/filter.png'/>" alt="" title="Filter"> will filter the preferred stack trace elements.
+                With this you will be able to see the application class flow.
+            </p>
+
+            <img src="<c:url value="/assets/img/log4j-thirdparty-view.png"/>">
         </section>
 
         <section id="what-next">
             <div class="page-header">
                 <h1>What Next?</h1>
             </div>
-            <p class="lead">We can also monitor log4j for third party loggers. Click on the button below for the next demonstration.</p>
-            <a class="btn btn-success btn-large" href="<c:url value="/log4j/"><c:param name="type" value="org"/></c:url> ">Third Party Logger Demo &raquo;</a>
+            <p class="lead">Next step is to create your own log4j monitor. You can customize you monitor by specifying log4j preferences.</p>
+            <a class="btn btn-success btn-large" href="http://piraso.org/user-guide.html">Client User Guide &raquo;</a>
         </section>
     </div>
 </div>

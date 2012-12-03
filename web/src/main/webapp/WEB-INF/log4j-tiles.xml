@@ -59,5 +59,16 @@
     <put-attribute name="body" value="/WEB-INF/jsp/log4j/securityLogs.jsp"/>
   </definition>
 
+  <definition name=".log4j.org" extends=".log4j">
+    <put-attribute name="subTitle" value="log4j.org.title" type="string"/>
+  </definition>
+
+  <definition name="log4j.org.home" extends=".log4j.org">
+    <put-attribute name="body" value="/WEB-INF/jsp/log4j/orgHome.jsp"/>
+  </definition>
+
+  <definition name="log4j.org.logs" extends=".log4j.org">
+    <put-attribute name="body" value="/WEB-INF/jsp/log4j/orgLogs.jsp"/>
+  </definition>
 
 </tiles-definitions>
