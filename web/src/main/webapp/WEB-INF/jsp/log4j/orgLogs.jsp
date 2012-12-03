@@ -48,7 +48,7 @@
             <div class="page-header">
                 <h1>What Next?</h1>
             </div>
-            <p class="lead">Next step is to create your own log4j monitor. You can customize you monitor by specifying log4j preferences.</p>
+            <p class="lead">Next step is to create your own log4j monitor. You can customize your monitor by specifying log4j preferences.</p>
             <a class="btn btn-success btn-large" href="http://piraso.org/user-guide.html">Client User Guide &raquo;</a>
         </section>
     </div>
