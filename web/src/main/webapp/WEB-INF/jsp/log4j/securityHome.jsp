@@ -20,20 +20,24 @@
             <div class="page-header">
                 <h1><fmt:message key="start.demo"/></h1>
             </div>
-            <p class="lead">This will demonstrate log4j monitoring for <code>demo</code> loggers with <code>ERROR</code> and <code>WARNING</code> levels. Follow the steps provided before continuing.</p>
+            <p class="lead">
+                We can also monitor log4j using selected loggers.
+                For this demo we will only be showing <code>demo.security</code> logger with <code>INFO</code> logging level.
+                Follow the steps provided before continuing.
+            </p>
 
             <h3>Instructions</h3>
 
             <p>
-                Please follow these Piraso client platform instructions.
+            Please follow these Piraso client platform instructions.
             </p>
 
             <p><span class="badge badge-success">1</span> Open Piraso client platform.</p>
-            <p><span class="badge badge-info">2</span> Click on <code>File > New Monitor Instance > Monitor: [DEMO] - log4j - error levels</code>.</p>
+            <p><span class="badge badge-info">2</span> Click on <code>File > New Monitor Instance > Monitor: [DEMO] - log4j - security - info levels</code>.</p>
 
             <p>
-                <img src="<c:url value='/assets/img/new-monitor.png'/>" alt="">
-                <img src="<c:url value='/assets/img/log4j-error-monitor-menu.png'/>" alt="">
+            <img src="<c:url value='/assets/img/new-monitor.png'/>" alt="">
+            <img src="<c:url value='/assets/img/log4j-security-monitor-menu.png'/>" alt="">
             </p>
 
             <h3>Proceed Demo</h3>

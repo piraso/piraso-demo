@@ -20,8 +20,25 @@
             <div class="page-header">
                 <h1><fmt:message key="start.demo"/></h1>
             </div>
-            <p class="lead">Follow the steps provided and click on start to proceed with the demonstration.</p>
+            <p class="lead">This will demonstrate log4j monitoring for <code>demo</code> loggers with <code>ALL</code> levels. Follow the steps provided before continuing.</p>
 
+            <h3>Instructions</h3>
+
+            <p>
+            Please follow these Piraso client platform instructions.
+            </p>
+
+            <p><span class="badge badge-success">1</span> Open Piraso client platform.</p>
+            <p><span class="badge badge-info">2</span> Click on <code>File > New Monitor Instance > Monitor: [DEMO] - log4j - all levels</code>.</p>
+
+            <p>
+            <img src="<c:url value='/assets/img/new-monitor.png'/>" alt="">
+            <img src="<c:url value='/assets/img/log4j-all-monitor-menu.png'/>" alt="">
+            </p>
+
+            <h3>Proceed Demo</h3>
+
+            <p>Clicking on Proceed Demo will execute the logging codes above.</p>
 
             <a class="btn btn-success btn-large" href="<c:url value="/log4j/logs"><c:param name="type" value="${param['type']}"/></c:url> ">Proceed Demo &raquo;</a>
         </section>

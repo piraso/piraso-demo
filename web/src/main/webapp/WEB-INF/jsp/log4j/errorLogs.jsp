@@ -23,25 +23,21 @@
 
             <h3>Monitor Results</h3>
 
-            <img src="<c:url value="/assets/img/log4j-all.png"/>">
-
-            <h3>Log4j View</h3>
-
             <p>
-                Try clicking on the error log entries and click on <code>Exception</code> to see the exception stack trace.
-                Clicking on <img src="<c:url value='/assets/img/filter.png'/>" alt="" title="Filter"> will filter the preferred stack trace elements.
+                <img src="<c:url value="/assets/img/log4j-error.png"/>">
             </p>
 
-            <img src="<c:url value="/assets/img/log4j-all-exception.png"/>">
-
+            <div class="alert alert-info">
+                Take note that no <code>TRACE</code>, <code>DEBUG</code>, and <code>INFO</code> entries are logged from the monitor.
+            </div>
         </section>
 
         <section id="what-next">
             <div class="page-header">
                 <h1>What Next?</h1>
             </div>
-            <p class="lead">We can also monitor log4j with DEBUG log levels. Click on the button below for the next demonstration.</p>
-            <a class="btn btn-success btn-large" href="<c:url value="/log4j/"><c:param name="type" value="debug"/></c:url> ">Debug Level Demo &raquo;</a>
+            <p class="lead">We can also monitor log4j using selected loggers. For the next demo we will only be showing <code>demo.security</code> logger with <code>INFO</code> logging level. Click on the button below for the next demonstration.</p>
+            <a class="btn btn-success btn-large" href="<c:url value="/log4j/"><c:param name="type" value="security"/></c:url> ">Security Logger Demo &raquo;</a>
         </section>
     </div>
 </div>

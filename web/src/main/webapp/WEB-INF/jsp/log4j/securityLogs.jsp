@@ -24,11 +24,12 @@
             <h3>Monitor Results</h3>
 
             <p>
-            <img src="<c:url value="/assets/img/log4j-debug.png"/>">
+                <img src="<c:url value="/assets/img/log4j-security.png"/>">
             </p>
 
             <div class="alert alert-info">
-                Take note that no <code>TRACE</code> entries are logged from the monitor.
+                Take note that no <code>TRACE</code>, <code>DEBUG</code> entries are logged from the monitor.
+                And only for <code>demo.security</code> log entries are available.
             </div>
         </section>
 
@@ -36,8 +37,8 @@
             <div class="page-header">
                 <h1>What Next?</h1>
             </div>
-            <p class="lead">We can also monitor log4j with ERROR or WARNING log levels. Click on the button below for the next demonstration.</p>
-            <a class="btn btn-success btn-large" href="<c:url value="/log4j/"><c:param name="type" value="error"/></c:url> ">Error and Warning Level Demo &raquo;</a>
+            <p class="lead">We can also monitor log4j with DEBUG log levels. Click on the button below for the next demonstration.</p>
+            <a class="btn btn-success btn-large" href="<c:url value="/log4j/"><c:param name="type" value="debug"/></c:url> ">Debug Level Demo &raquo;</a>
         </section>
     </div>
 </div>
