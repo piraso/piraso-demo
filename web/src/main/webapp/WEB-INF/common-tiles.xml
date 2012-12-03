@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+    "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+    "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+
+<tiles-definitions>
+  <definition name=".layout" template="/WEB-INF/jsp/common/layout.jsp">
+    <put-attribute name="title" value="" type="string" />
+    <put-attribute name="header" value="/WEB-INF/jsp/common/header.jsp" />
+    <put-attribute name="footer" value="/WEB-INF/jsp/common/footer.jsp" />
+    <put-attribute name="body" value="/WEB-INF/jsp/common/blank.jsp" />
+    <put-list-attribute name="scripts">
+      <add-attribute value="/assets/js/jquery.js" type="string"/>
+      <add-attribute value="/assets/js/google-code-prettify/prettify.js" type="string"/>
+      <add-attribute value="/assets/js/bootstrap-transition.js" type="string"/>
+      <add-attribute value="/assets/js/bootstrap-alert.js" type="string"/>
+      <add-attribute value="/assets/js/bootstrap-modal.js" type="string"/>
+      <add-attribute value="/assets/js/bootstrap-dropdown.js" type="string"/>
+      <add-attribute value="/assets/js/bootstrap-scrollspy.js" type="string"/>
+      <add-attribute value="/assets/js/bootstrap-tab.js" type="string"/>
+      <add-attribute value="/assets/js/bootstrap-tooltip.js" type="string"/>
+      <add-attribute value="/assets/js/bootstrap-popover.js" type="string"/>
+      <add-attribute value="/assets/js/bootstrap-button.js" type="string"/>
+      <add-attribute value="/assets/js/bootstrap-collapse.js" type="string"/>
+      <add-attribute value="/assets/js/bootstrap-carousel.js" type="string"/>
+      <add-attribute value="/assets/js/bootstrap-typeahead.js" type="string"/>
+      <add-attribute value="/assets/js/bootstrap-affix.js" type="string"/>
+      <add-attribute value="/assets/js/application.js" type="string"/>
+    </put-list-attribute>
+    <put-list-attribute name="styles">
+      <add-attribute value="/assets/css/bootstrap.css" type="string"/>
+      <add-attribute value="/assets/css/responsive.css" type="string"/>
+      <add-attribute value="/assets/css/font-awesome.css" type="string"/>
+      <add-attribute value="/assets/js/google-code-prettify/prettify.css" type="string"/>
+      <add-attribute value="/assets/css/doc.css" type="string"/>
+    </put-list-attribute>
+  </definition>
+</tiles-definitions>

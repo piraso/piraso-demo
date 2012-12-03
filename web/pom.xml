@@ -23,6 +23,7 @@
     <java-diff-utils.version>1.2.1</java-diff-utils.version>
     <apache-poi.version>3.8</apache-poi.version>
     <slf4j-log4j12.version>1.5.8</slf4j-log4j12.version>
+    <piraso.version>1.1-SNAPSHOT</piraso.version>
     <war.name>piraso-demo-web</war.name>
   </properties>
 
@@ -62,6 +63,21 @@
         </includes>
       </testResource>
     </testResources>
+    <plugins>
+      <plugin>
+        <groupId>org.piraso</groupId>
+        <artifactId>piraso-maven-plugin</artifactId>
+        <version>${piraso.version}</version>
+        <executions>
+          <execution>
+            <phase>process-resources</phase>
+            <goals>
+              <goal>web-xml</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
   </build>
 
   <dependencies>
@@ -69,7 +85,10 @@
       <groupId>commons-collections</groupId>
       <artifactId>commons-collections</artifactId>
     </dependency>
-
+    <dependency>
+      <groupId>commons-lang</groupId>
+      <artifactId>commons-lang</artifactId>
+    </dependency>
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-webmvc</artifactId>
@@ -128,6 +147,12 @@
 
     <!-- Apache Commons Upload -->
     <dependency>
+      <groupId>commons-fileupload</groupId>
+      <artifactId>commons-fileupload</artifactId>
+      <version>1.2.2</version>
+    </dependency>
+
+    <dependency>
       <groupId>commons-io</groupId>
       <artifactId>commons-io</artifactId>
       <version>2.0.1</version>
@@ -180,6 +205,17 @@
       <groupId>com.googlecode.java-diff-utils</groupId>
       <artifactId>diffutils</artifactId>
       <version>${java-diff-utils.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.piraso</groupId>
+      <artifactId>context-logger-spring-web-server</artifactId>
+      <version>${piraso.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.piraso</groupId>
+      <artifactId>log4j-context-logger-server</artifactId>
+      <version>${piraso.version}</version>
     </dependency>
   </dependencies>
 </project>

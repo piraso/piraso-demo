@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+    "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+    "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+
+<tiles-definitions>
+  <definition name=".log4j" extends=".layout">
+    <put-attribute name="scrollspy" value=".bs-docs-sidebar" type="string"/>
+    <put-attribute name="activeNav" value="log4j" type="string"/>
+    <put-attribute name="title" value="log4j.title" type="string"/>
+  </definition>
+
+  <definition name=".log4j.all" extends=".log4j">
+    <put-attribute name="subTitle" value="log4j.all.title" type="string"/>
+  </definition>
+
+  <definition name="log4j.all.home" extends=".log4j.all">
+    <put-attribute name="body" value="/WEB-INF/jsp/log4j/allHome.jsp"/>
+  </definition>
+
+  <definition name="log4j.all.logs" extends=".log4j.all">
+    <put-attribute name="body" value="/WEB-INF/jsp/log4j/allLogs.jsp"/>
+  </definition>
+
+  <definition name=".log4j.debug" extends=".log4j">
+    <put-attribute name="subTitle" value="log4j.debug.title" type="string"/>
+  </definition>
+
+  <definition name="log4j.debug.home" extends=".log4j.debug">
+    <put-attribute name="body" value="/WEB-INF/jsp/log4j/debugHome.jsp"/>
+  </definition>
+
+  <definition name="log4j.debug.logs" extends=".log4j.debug">
+    <put-attribute name="body" value="/WEB-INF/jsp/log4j/debugLogs.jsp"/>
+  </definition>
+
+  <definition name=".log4j.error" extends=".log4j">
+    <put-attribute name="subTitle" value="log4j.error.title" type="string"/>
+  </definition>
+
+  <definition name="log4j.error.home" extends=".log4j.error">
+    <put-attribute name="body" value="/WEB-INF/jsp/log4j/errorHome.jsp"/>
+  </definition>
+
+  <definition name="log4j.error.logs" extends=".log4j.error">
+    <put-attribute name="body" value="/WEB-INF/jsp/log4j/errorLogs.jsp"/>
+  </definition>
+
+</tiles-definitions>
