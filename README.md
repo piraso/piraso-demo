@@ -1,4 +1,4 @@
-![P](http://piraso.org/piraso_32.png)iraso Demo
+![P](http://piraso.org/piraso_32.png)iraso Demo [![Build Status](https://buildhive.cloudbees.com/job/alvinrdeleon/job/piraso-demo/badge/icon)](https://buildhive.cloudbees.com/job/alvinrdeleon/job/piraso-demo/)
 =======
 
 ### Introduction
