@@ -3,7 +3,15 @@
 
 ### Introduction
 
-Demo project for Piraso.
+This is live demo project for Piraso.
+
+The demo project shows how Piraso was able to monitor the following:
+
+* Http request and response
+* Application Logging
+* SQL Execution
+* Spring Remoting
+* Hibernate calls
 
 To learn more please see http://www.piraso.org/.
 
