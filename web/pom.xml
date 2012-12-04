@@ -209,7 +209,7 @@
 
     <dependency>
       <groupId>org.piraso</groupId>
-      <artifactId>context-logger-spring-web-server</artifactId>
+      <artifactId>piraso-spring-web-server</artifactId>
       <version>${piraso.version}</version>
     </dependency>
     <dependency>
