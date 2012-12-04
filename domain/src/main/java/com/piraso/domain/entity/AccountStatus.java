@@ -1,4 +1,4 @@
-package com.piraso.domain.common.entity;
+package com.piraso.domain.entity;
 
 public enum AccountStatus {
     IN_ACTIVE, ACTIVE

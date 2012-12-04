@@ -14,7 +14,7 @@
 
   <bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor"/>
 
-  <bean id="commonDataSource" class="org.apache.commons.dbcp.BasicDataSource"
+  <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
         destroy-method="close">
     <property name="url" value="${dataSource.url}"/>
     <property name="username" value="${dataSource.username}"/>
@@ -46,7 +46,7 @@
 
   <bean id="sessionFactory"
         class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
-    <property name="dataSource" ref="commonDataSource"/>
+    <property name="dataSource" ref="dataSource"/>
     <property name="hibernateProperties">
       <props>
         <prop key="hibernate.dialect">${hibernate.dialect}</prop>
@@ -63,13 +63,13 @@
     <!-- Scan for entities and mappings -->
     <property name="packagesToScan">
       <list>
-        <value>com.piraso.domain.common.entity</value>
+        <value>com.piraso.domain.entity</value>
       </list>
     </property>
 
   </bean>
 
-  <bean id="commonBaseDao" class="com.piraso.core.dao.BaseDaoImpl"
+  <bean id="baseDao" class="com.piraso.core.dao.BaseDaoImpl"
         abstract="true">
     <property name="hibernateTemplate" ref="hibernateTemplate"/>
     <property name="jdbcTemplate" ref="jdbcTemplate"/>
@@ -83,7 +83,6 @@
   </bean>
 
   <alias name="transactionManager" alias="carbonFiveTransactionManager"/>
-  <alias name="transactionManager" alias="commonTransactionManager"/>
 
   <!-- Enable Annotation-based transaction management: -->
   <tx:annotation-driven transaction-manager="transactionManager"/>
@@ -93,7 +92,7 @@
   </bean>
 
   <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
-    <property name="dataSource" ref="commonDataSource"/>
+    <property name="dataSource" ref="dataSource"/>
   </bean>
 
   <bean id="schemaName" class="java.lang.String">
@@ -105,6 +104,6 @@
     <constructor-arg index="1" ref="schemaName"/>
   </bean>
 
-  <import resource="spring-domain-common.xml"/>
+  <import resource="spring-domain.xml"/>
 
 </beans>

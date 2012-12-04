@@ -6,22 +6,22 @@
        default-lazy-init="false" default-dependency-check="none"
        default-autowire="no">
 
-  <!--  Bean definitions of stuff in this project -->
-  <import resource="classpath:spring-domain-common-datalayer.xml"/>
+  <import resource="classpath:spring-domain-datalayer.xml"/>
 
-  <bean id="commonAbstractTxBean"
+  <bean id="abstractTxBean"
         class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean"
         abstract="true">
-    <property name="transactionManager" ref="commonTransactionManager"/>
+    <property name="transactionManager" ref="transactionManager"/>
     <property name="transactionAttributeSource">
       <bean class="org.springframework.transaction.annotation.AnnotationTransactionAttributeSource"/>
     </property>
   </bean>
 
-  <bean id="commonManagementService" parent="commonAbstractTxBean">
+  <bean id="accountManagementService" parent="abstractTxBean">
     <property name="target">
-      <bean class="com.piraso.domain.common.service.UserManagementServiceImpl">
-        <property name="mapper" ref="commonDozer"/>
+      <bean class="com.piraso.domain.service.AccountManagementServiceImpl">
+        <property name="mapper" ref="dozer"/>
+        <property name="accountDao" ref="accountDao"/>
       </bean>
     </property>
   </bean>

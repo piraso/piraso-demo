@@ -1,4 +1,4 @@
-package com.piraso.domain.common.entity;
+package com.piraso.domain.entity;
 
 import com.piraso.core.entity.BaseAuditedBean;
 
@@ -11,8 +11,11 @@ public class Account extends BaseAuditedBean {
 
     private static final long serialVersionUID = 1L;
 
-    @Column(length = 50, nullable = false, unique = true)
+    @Column(length = 50, nullable = false)
     private String name;
+
+    @Column(name="session_id", length = 255, nullable = false)
+    private String sessionID;
 
     @Column(columnDefinition = "text", nullable = true)
     private String description;
@@ -65,5 +68,13 @@ public class Account extends BaseAuditedBean {
 
     public void setStatus(AccountStatus status) {
         this.status = status;
+    }
+
+    public String getSessionID() {
+        return sessionID;
+    }
+
+    public void setSessionID(String sessionID) {
+        this.sessionID = sessionID;
     }
 }
