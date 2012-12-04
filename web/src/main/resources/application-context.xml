@@ -17,10 +17,6 @@
     </property>
   </bean>
 
-  <bean id="testContext" class="java.lang.Boolean" factory-method="valueOf">
-    <constructor-arg value="true" type="java.lang.String"/>
-  </bean>
-
   <!-- IMPORT BEANS UNDER TEST -->
   <import resource="classpath:spring-domain-db-session.xml"/>
 </beans>

@@ -4,7 +4,7 @@
 <%@ taglib uri="http://piraso.org/taglibs/scripts" prefix="scripts" %>
 
 <p class="lead">
-    This will list all accounts. In here you will be able to active and delete accounts.
+    This will list all accounts. In here you will be able to activate, archive, and delete accounts.
 </p>
 
 <div class="hide">

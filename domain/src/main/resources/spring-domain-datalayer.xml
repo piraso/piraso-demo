@@ -19,7 +19,7 @@
     <property name="migrationResolver" ref="migrationResolver"/>
     <property name="versionStrategy" ref="versionStrategy"/>
     <property name="domain" value="piraso"/>
-    <property name="testContext" ref="testContext"/>
+    <property name="forceMigrate" value="true"/>
   </bean>
 
   <bean id="accountDao" class="com.piraso.domain.dao.AccountDaoImpl"

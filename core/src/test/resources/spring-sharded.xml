@@ -147,7 +147,7 @@
     <property name="migrationResolver" ref="migrationResolver"/>
     <property name="versionStrategy" ref="versionStrategy"/>
     <property name="domain" value="sample"/>
-    <property name="testContext" ref="testContext"/>
+    <property name="forceMigrate" ref="testContext"/>
   </bean>
 
   <bean id="audienceSchemeDao" class="com.piraso.core.sample.dao.TestEntityDaoImpl"

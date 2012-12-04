@@ -6,8 +6,6 @@ import com.carbonfive.db.migration.ResourceMigrationResolver;
 import com.carbonfive.db.migration.SimpleVersionStrategy;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Required;
-import org.springframework.dao.IncorrectResultSizeDataAccessException;
-import org.springframework.jdbc.core.JdbcTemplate;
 
 import javax.sql.DataSource;
 import java.util.SortedSet;
@@ -33,11 +31,11 @@ public abstract class AbstractDataSourceMigrationManager  {
 
     protected String domain;
 
-    protected boolean testContext;
+    protected boolean forceMigrate;
 
     @Required
-    public void setTestContext(boolean testContext) {
-        this.testContext = testContext;
+    public void setForceMigrate(boolean forceMigrate) {
+        this.forceMigrate = forceMigrate;
     }
 
     @Required
@@ -76,11 +74,8 @@ public abstract class AbstractDataSourceMigrationManager  {
         manager.setMigrationResolver(migrationResolver);
         manager.setVersionStrategy(versionStrategy);
 
-        if (testContext) {
-            LOGGER.info("isTestContext() returned True. About to run carbon5 migrations for domain: " + this.domain);
-            manager.migrate();
-        } else if (mayAutoMigrate()) {
-            LOGGER.info("mayAutoMigrate() returned True. About to run carbon5 migrations for domain: " + this.domain);
+        if (forceMigrate) {
+            LOGGER.info("forceMigrate() returned True. About to run carbon5 migrations for domain: " + this.domain);
             manager.migrate();
         } else if(force) {
             LOGGER.info("forced migration. About to run carbon5 migrations for domain: " + this.domain);
@@ -99,26 +94,6 @@ public abstract class AbstractDataSourceMigrationManager  {
 
                 throw new IllegalStateException("Database schema is not up-to-date for domain: " + this.domain);
             }
-        }
-    }
-
-    protected boolean mayAutoMigrate() {
-        try {
-            JdbcTemplate template = new JdbcTemplate(dataSourceSelector.getDataSource());
-            String s = (String) template.queryForObject("select value from ops.env where name='" + AUTO_DB_MIGRATE_NAME + "'", String.class);
-
-            return Boolean.parseBoolean(s);
-        } catch (IncorrectResultSizeDataAccessException e) {
-            // There is no row for the AUTO_DB_MIGRATE property. We assume the worst
-            // and don't execute any migrations.
-            LOGGER.warn("ops.env is not setup to automigrate , the " + AUTO_DB_MIGRATE_NAME + " property is not set. returning false ", e);
-
-            return false;
-        } catch (Exception e) {
-            // Any exception we assume the worst and don't want to run any miugrations automatically.
-            LOGGER.warn("Failed to determine " + AUTO_DB_MIGRATE_NAME + " , assuming the worst and returning false.", e);
-
-            return false;
         }
     }
 
