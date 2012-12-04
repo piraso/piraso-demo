@@ -3,7 +3,7 @@ create table account (
   created_by varchar(64) not null,
   created_time datetime not null,
   last_updated_by varchar(64) not null,
-  last_updated_time datetime not null,
+  last_updated_time datetime,
   version int default 0,
   activation_code varchar(50) not null,
   activation_time datetime,

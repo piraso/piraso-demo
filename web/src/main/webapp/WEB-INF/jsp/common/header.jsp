@@ -13,7 +13,7 @@
             <a id="piraso_logo" class="brand" href="http://piraso.org/"><fmt:message key="app.logo.title"/></a>
             <div class="nav-collapse collapse">
                 <ul class="nav">
-                    <li${activeNav eq 'log4j' ? ' class="active"' : ''}>
+                    <li class="dropdown${activeNav eq 'log4j' ? ' active' : ''}">
                         <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"><fmt:message key="log4j.title"/> <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li><a href="<c:url value='/log4j/'><c:param name="type" value="all"/></c:url>"><fmt:message key="log4j.all.title"/></a></li>
@@ -21,6 +21,14 @@
                             <li><a href="<c:url value='/log4j/'><c:param name="type" value="error"/></c:url>"><fmt:message key="log4j.error.title"/></a></li>
                             <li><a href="<c:url value='/log4j/'><c:param name="type" value="security"/></c:url>"><fmt:message key="log4j.security.title"/></a></li>
                             <li><a href="<c:url value='/log4j/'><c:param name="type" value="org"/></c:url>"><fmt:message key="log4j.org.title"/></a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown${activeNav eq 'sql' ? ' active' : ''}">
+                        <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"><fmt:message key="sql.title"/> <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="<c:url value='/sql/'><c:param name="type" value="queries"/></c:url>"><fmt:message key="sql.queries.title"/></a></li>
+                            <li><a href="<c:url value='/sql/'><c:param name="type" value="data"/></c:url>"><fmt:message key="sql.data.title"/></a></li>
+                            <li><a href="<c:url value='/sql/'><c:param name="type" value="stacktrace"/></c:url>"><fmt:message key="sql.stacktrace.title"/></a></li>
                         </ul>
                     </li>
                 </ul>

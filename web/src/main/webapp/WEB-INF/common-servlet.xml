@@ -11,6 +11,7 @@
       <list>
         <value>/WEB-INF/common-tiles.xml</value>
         <value>/WEB-INF/log4j-tiles.xml</value>
+        <value>/WEB-INF/sql-tiles.xml</value>
       </list>
     </property>
   </bean>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+    "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+    "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+
+<tiles-definitions>
+  <definition name=".sql" extends=".layout">
+    <put-attribute name="scrollspy" value=".bs-docs-sidebar" type="string"/>
+    <put-attribute name="activeNav" value="sql" type="string"/>
+    <put-attribute name="title" value="sql.title" type="string"/>
+    <put-list-attribute name="scripts" inherit="true">
+      <add-attribute value="/assets/js/account/add-account.js" type="string"/>
+      <add-attribute value="/assets/js/account/list-account.js" type="string"/>
+    </put-list-attribute>
+  </definition>
+
+  <definition name=".sql.queries" extends=".sql">
+    <put-attribute name="subTitle" value="sql.queries.title" type="string"/>
+  </definition>
+
+  <definition name="sql.queries.home" extends=".sql.queries">
+    <put-attribute name="body" value="/WEB-INF/jsp/sql/queriesHome.jsp"/>
+  </definition>
+
+  <definition name="sql.queries.accounts" extends=".sql.queries">
+    <put-attribute name="body" value="/WEB-INF/jsp/sql/queriesAccount.jsp"/>
+  </definition>
+
+  <definition name=".sql.data" extends=".sql">
+    <put-attribute name="subTitle" value="sql.data.title" type="string"/>
+  </definition>
+
+  <definition name="sql.data.home" extends=".sql.data">
+    <put-attribute name="body" value="/WEB-INF/jsp/sql/dataHome.jsp"/>
+  </definition>
+
+  <definition name="sql.data.accounts" extends=".sql.data">
+    <put-attribute name="body" value="/WEB-INF/jsp/sql/dataAccount.jsp"/>
+  </definition>
+
+
+</tiles-definitions>

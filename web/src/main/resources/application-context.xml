@@ -5,5 +5,22 @@
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+  <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+    <property name="location" value="classpath:mysql.properties"/>
+  </bean>
 
+  <bean id="dozer" class="org.dozer.spring.DozerBeanMapperFactoryBean">
+    <property name="mappingFiles">
+      <list>
+        <value>classpath:enum-string.converter.dozer.xml</value>
+      </list>
+    </property>
+  </bean>
+
+  <bean id="testContext" class="java.lang.Boolean" factory-method="valueOf">
+    <constructor-arg value="true" type="java.lang.String"/>
+  </bean>
+
+  <!-- IMPORT BEANS UNDER TEST -->
+  <import resource="classpath:spring-domain-db-session.xml"/>
 </beans>

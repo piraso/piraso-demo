@@ -208,6 +208,18 @@
     </dependency>
 
     <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>${mysql.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.piraso</groupId>
+      <artifactId>piraso-demo-domain</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+
+    <dependency>
       <groupId>org.piraso</groupId>
       <artifactId>piraso-spring-web-server</artifactId>
       <version>${piraso.version}</version>
@@ -215,6 +227,11 @@
     <dependency>
       <groupId>org.piraso</groupId>
       <artifactId>log4j-context-logger-server</artifactId>
+      <version>${piraso.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.piraso</groupId>
+      <artifactId>sql-context-logger-server</artifactId>
       <version>${piraso.version}</version>
     </dependency>
   </dependencies>

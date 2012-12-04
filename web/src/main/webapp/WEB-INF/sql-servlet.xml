@@ -11,7 +11,7 @@
 
   <import resource="common-servlet.xml"/>
 
-  <context:component-scan base-package="org.piraso.demo.controller.log4j"/>
+  <context:component-scan base-package="org.piraso.demo.controller.sql"/>
 
   <mvc:annotation-driven />
 </beans>

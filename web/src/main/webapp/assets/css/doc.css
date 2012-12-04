@@ -214,3 +214,23 @@ table#platform-download .installer-column {
 #under-construction {
     font-size: 120%;
 }
+
+table#list-table .checkbox-column {
+    width: 20px;
+}
+
+table#list-table .name-column {
+    width: 200px;
+}
+
+table#list-table .status-column {
+    width: 100px;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    margin: 0;
+}
+
+.table tbody tr.active td {
+    background-color: #feffe7;
+}

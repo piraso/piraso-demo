@@ -6,4 +6,6 @@ import java.util.List;
 
 public interface AccountManagementService {
     List<AccountVO> getSessionAccounts(String sessionId);
+
+    AccountVO addAccount(AccountVO account);
 }

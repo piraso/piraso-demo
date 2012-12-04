@@ -42,7 +42,7 @@ v<%@ taglib prefix="fmt" uri="http://java.sun.com/jstl/fmt" %>
             <a id="piraso_logo" class="brand" href="http://piraso.org/">iraso</a>
             <div class="nav-collapse collapse">
                 <ul class="nav">
-                    <li class="active">
+                    <li class="dropdown">
                         <a data-toggle="dropdown" class="dropdown-toggle" href="javascript:;">Application Logging <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li><a href="<c:url value='/log4j/'><c:param name="type" value="all"/></c:url>">All Logging Levels</a></li>
@@ -50,6 +50,14 @@ v<%@ taglib prefix="fmt" uri="http://java.sun.com/jstl/fmt" %>
                             <li><a href="<c:url value='/log4j/'><c:param name="type" value="error"/></c:url>">Error or Warning Logging Level</a></li>
                             <li><a href="<c:url value='/log4j/'><c:param name="type" value="security"/></c:url>">Security Logger</a></li>
                             <li><a href="<c:url value='/log4j/'><c:param name="type" value="org"/></c:url>">Third Party Loggers</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="javascript:;">SQL Execution <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="<c:url value='/sql/'><c:param name="type" value="queries"/></c:url>">SQL Statements</a></li>
+                            <li><a href="<c:url value='/sql/'><c:param name="type" value="data"/></c:url>">SQL Result Sets</a></li>
+                            <li><a href="<c:url value='/sql/'><c:param name="type" value="stacktrace"/></c:url>">SQL Method Stack trace</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -68,12 +76,13 @@ v<%@ taglib prefix="fmt" uri="http://java.sun.com/jstl/fmt" %>
         <p>Development tool for debugging and analyzing request context log information captured from a supported java module.</p>
 
         <div class="pull-right">
-            <iframe src="http://ghbtns.com/github-btn.html?user=alvinrdeleon&repo=piraso&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="85px" height="20px"></iframe>
-            <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=alvinrdeleon&repo=piraso&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="80px" height="20px"></iframe>
+            <iframe src="http://ghbtns.com/github-btn.html?user=piraso&repo=piraso&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="85px" height="20px"></iframe>
+            <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=piraso&repo=piraso&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="80px" height="20px"></iframe>
             <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=alvinrdeleon&type=follow&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="20px"></iframe>
         </div>
         <p>
             <a class="btn btn-primary btn-large" href="<c:url value='/log4j/'><c:param name="type" value="all"/></c:url>">Application Logging &raquo;</a>
+            <a class="btn btn-large" href="<c:url value='/sql/'><c:param name="type" value="queries"/></c:url>">SQL Executions &raquo;</a>
         </p>
     </div>
 
@@ -85,7 +94,7 @@ v<%@ taglib prefix="fmt" uri="http://java.sun.com/jstl/fmt" %>
         </div>
         <div class="span4">
             <h3><i class="icon-github icon-large"></i> Open Source</h3>
-            <p>Piraso are licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache 2.0</a> and maintained by the community on <a onclick="_gaq.push(['_trackEvent', 'index', 'Links', 'Github Project']);" href="https://github.com/alvinrdeleon/piraso" target="_blank">GitHub</a>.</p>
+            <p>Piraso are licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache 2.0</a> and maintained by the community on <a href="https://github.com/piraso" target="_blank">GitHub</a>.</p>
         </div>
         <div class="span4">
             <h3><i class="icon-leaf icon-large"></i> Spring Framework</h3>

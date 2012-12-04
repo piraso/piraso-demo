@@ -29,7 +29,7 @@ public abstract class BaseAuditedBean implements AuditedEntity, VersionedEntity,
     @Column(name = "last_updated_by", length = 64, nullable = false)
     private String lastUpdatedBy;
 
-    @Column(name = "last_updated_time", nullable = false, insertable = false, updatable = false)
+    @Column(name = "last_updated_time", nullable = true, insertable = false, updatable = false)
     private Date lastUpdatedTime = new Date();
 
     public Long getId() {

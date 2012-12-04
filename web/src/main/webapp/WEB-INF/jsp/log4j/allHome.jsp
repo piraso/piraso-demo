@@ -20,7 +20,9 @@
             <div class="page-header">
                 <h1><fmt:message key="start.demo"/></h1>
             </div>
-            <p class="lead">This will demonstrate log4j monitoring for <code>demo</code> loggers with <code>ALL</code> levels. Follow the steps provided before continuing.</p>
+            <p class="lead">
+                This will demonstrate log4j monitoring for <code>demo</code> loggers with <code>ALL</code> levels. Follow the steps provided before continuing.
+            </p>
 
             <h3>Instructions</h3>
 
