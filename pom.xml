@@ -45,9 +45,9 @@
   </distributionManagement>
 
   <scm>
-    <connection>scm:git:https://github.com/alvinrdeleon/piraso-demo.git</connection>
-    <url>scm:git:https://github.com/alvinrdeleon/piraso-demo.git</url>
-    <developerConnection>scm:git:https://github.com/alvinrdeleon/piraso-demo.git</developerConnection>
+    <connection>scm:git:https://github.com/piraso/piraso-demo.git</connection>
+    <url>scm:git:https://github.com/piraso/piraso-demo.git</url>
+    <developerConnection>scm:git:https://github.com/piraso/piraso-demo.git</developerConnection>
   </scm>
 
   <modules>
