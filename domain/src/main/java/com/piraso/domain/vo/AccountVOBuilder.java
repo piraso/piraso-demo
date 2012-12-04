@@ -16,7 +16,7 @@ public class AccountVOBuilder {
     public AccountVOBuilder(AccountVO vo) {
         account.setName(vo.getName());
         account.setDescription(vo.getDescription());
-        account.setStatus(AccountStatus.IN_ACTIVE.name());
+        account.setStatus(AccountStatus.INACTIVE.name());
         account.setCreatedTime(new Date());
         account.setCreatedBy("builder");
         account.setLastUpdatedBy("builder");

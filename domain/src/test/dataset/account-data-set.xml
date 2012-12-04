@@ -24,7 +24,7 @@
       <value>session1</value>
       <value>code1</value>
       <value>account1 description</value>
-      <value>IN_ACTIVE</value>
+      <value>INACTIVE</value>
     </row>
     <row>
       <value>2</value>
@@ -37,7 +37,7 @@
       <value>session1</value>
       <value>code2</value>
       <value>account2 description</value>
-      <value>IN_ACTIVE</value>
+      <value>INACTIVE</value>
     </row>
     <row>
       <value>3</value>
@@ -50,7 +50,7 @@
       <value>session2</value>
       <value>code3</value>
       <value>account3 description</value>
-      <value>IN_ACTIVE</value>
+      <value>INACTIVE</value>
     </row>
   </table>
 </dataset>

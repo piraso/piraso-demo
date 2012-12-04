@@ -22,7 +22,7 @@ public class Account extends BaseAuditedBean {
 
     @Enumerated(EnumType.STRING)
     @Column(length = 10, nullable = false)
-    private AccountStatus status = AccountStatus.IN_ACTIVE;
+    private AccountStatus status = AccountStatus.INACTIVE;
 
     @Column(name = "activation_time", nullable = true)
     private Date activationTime;
