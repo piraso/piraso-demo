@@ -1,5 +1,15 @@
-<resource name="jdbc/piraso" auth="Container" type="javax.sql.DataSource">
-  <param name="username" value="piraso" />
-  <param name="password" value="piraso" />
-  <param name="url" value="jdbc:cloudbees://piraso" />
-</resource>
+<?xml version="1.0"?>
+<cloudbees-web-app xmlns="http://www.cloudbees.com/xml/webapp/1">
+  <appid>piraso-demo</appid>
+  <context-param>
+    <param-name>application.environment</param-name>
+    <param-value>prod</param-value>
+  </context-param>
+  <resource name="jdbc/piraso" auth="Container" type="javax.sql.DataSource">
+    <param name="username" value="piraso" />
+    <param name="password" value="piraso" />
+    <param name="url" value="jdbc:cloudbees://piraso" />
+  </resource>
+</cloudbees-web-app>
+
+

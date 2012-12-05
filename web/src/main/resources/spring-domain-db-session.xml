@@ -1,47 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
        xmlns:tx="http://www.springframework.org/schema/tx"
-       xsi:schemaLocation="
-       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd"
-       default-lazy-init="false" default-dependency-check="none"
+       default-lazy-init="false"
+       default-dependency-check="none"
        default-autowire="no">
 
   <aop:config proxy-target-class="true"/>
 
   <bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor"/>
-
-  <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
-        destroy-method="close">
-    <property name="url" value="${dataSource.url}"/>
-    <property name="username" value="${dataSource.username}"/>
-    <property name="password" value="${dataSource.password}"/>
-    <property name="driverClassName" value="${dataSource.driverClassName}"/>
-    <property name="validationQuery" value="${dataSource.pool.validationQuery}"/>
-    <property name="defaultAutoCommit" value="false"/>
-    <property name="maxActive" value="8"/>
-    <property name="maxWait" value="10000"/>
-    <property name="maxOpenPreparedStatements" value="20"/>
-    <property name="poolPreparedStatements" value="false"/>
-    <property name="initialSize" value="1"/>
-    <property name="accessToUnderlyingConnectionAllowed" value="1"/>
-
-    <property name="testOnBorrow" value="true"/>
-    <property name="testOnReturn" value="false"/>
-    <property name="testWhileIdle" value="true"/>
-
-    <property name="minIdle" value="0"/>
-    <property name="maxIdle" value="1"/>
-
-    <!-- Idle connections are checked every 10 seconds -->
-    <property name="timeBetweenEvictionRunsMillis" value="10000"/>
-    <!-- Idle connections live for 10 seconds before being closed -->
-    <property name="minEvictableIdleTimeMillis" value="10000"/>
-    <property name="numTestsPerEvictionRun" value="8"/>
-  </bean>
+  
+  <import resource="datasource-bees.xml" />
 
   <bean id="sessionFactory"
         class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
