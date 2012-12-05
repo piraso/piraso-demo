@@ -2,6 +2,7 @@ package com.piraso.domain.service;
 
 import com.piraso.domain.dao.AccountDao;
 import com.piraso.domain.entity.Account;
+import com.piraso.domain.entity.AccountStatus;
 import com.piraso.domain.vo.AccountVO;
 import org.apache.log4j.Logger;
 import org.dozer.Mapper;
@@ -49,6 +50,33 @@ public class AccountManagementServiceImpl implements AccountManagementService {
         }
 
         return vos;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    @Transactional
+    public int activate(String sessionId, List<String> accountNames) {
+        return accountDao.changeStatus(sessionId, accountNames, AccountStatus.ACTIVE);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    @Transactional
+    public int archive(String sessionId, List<String> accountNames) {
+        return accountDao.changeStatus(sessionId, accountNames, AccountStatus.ARCHIVED);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    @Transactional
+    public int delete(String sessionId, List<String> accountNames) {
+        return accountDao.delete(sessionId, accountNames);
     }
 
     /**
