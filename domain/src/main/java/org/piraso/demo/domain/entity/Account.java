@@ -1,21 +1,33 @@
-package org.piraso.domain.vo;
+package org.piraso.demo.domain.entity;
 
-import org.piraso.core.vo.AuditedVO;
-import org.piraso.core.vo.AuditedVO;
+import org.piraso.core.entity.BaseAuditedBean;
 
+import javax.persistence.*;
 import java.util.Date;
 
-public class AccountVO extends AuditedVO {
+@Entity
+@Table(name = "account")
+public class Account extends BaseAuditedBean {
+
+    private static final long serialVersionUID = 1L;
+
+    @Column(length = 50, nullable = false)
     private String name;
 
+    @Column(name="session_id", length = 255, nullable = false)
     private String sessionID;
 
+    @Column(columnDefinition = "text", nullable = true)
     private String description;
 
-    private String status;
+    @Enumerated(EnumType.STRING)
+    @Column(length = 10, nullable = false)
+    private AccountStatus status = AccountStatus.INACTIVE;
 
+    @Column(name = "activation_time", nullable = true)
     private Date activationTime;
 
+    @Column(name = "activation_code", length = 50, nullable = false)
     private String activationCode;
 
     public String getActivationCode() {
@@ -50,31 +62,19 @@ public class AccountVO extends AuditedVO {
         this.name = name;
     }
 
+    public AccountStatus getStatus() {
+        return status;
+    }
+
+    public void setStatus(AccountStatus status) {
+        this.status = status;
+    }
+
     public String getSessionID() {
         return sessionID;
     }
 
     public void setSessionID(String sessionID) {
         this.sessionID = sessionID;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
-    @Override
-    public String toString() {
-        return "AccountVO{" +
-                "activationCode='" + activationCode + '\'' +
-                ", name='" + name + '\'' +
-                ", sessionID='" + sessionID + '\'' +
-                ", description='" + description + '\'' +
-                ", status='" + status + '\'' +
-                ", activationTime=" + activationTime +
-                '}';
     }
 }

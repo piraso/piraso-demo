@@ -30,7 +30,7 @@
                     No statement was executed but a connection <code>rollback</code> was invoked.
                 </p>
 
-                <img src="<c:url value="/assets/img/sql-statement-failed.png"/>">
+                <img src="<c:url value="/assets/img/sql-add-stacktrace-failed.png"/>">
             </div>
 
             <div id="add-account-expected-success" class="expected-result hide">
@@ -40,7 +40,7 @@
                     An <code>insert</code> statement was triggered after the successful saving of account.
                 </p>
 
-                <img src="<c:url value="/assets/img/sql-add-statement-success.png"/>">
+                <img src="<c:url value="/assets/img/sql-add-stacktrace-success.png"/>">
             </div>
         </section>
 
@@ -58,7 +58,7 @@
                     A <code>select</code> statement was triggered after the successful loading of accounts.
                 </p>
 
-                <img src="<c:url value="/assets/img/sql-list-load-success.png"/>">
+                <img src="<c:url value="/assets/img/sql-stacktrace-list.png"/>">
             </div>
 
             <div id="activate-account-expected-success" class="expected-result hide">
@@ -68,7 +68,7 @@
                     A <code>update</code> statement was triggered after the successful activation of selected accounts.
                 </p>
 
-                <img src="<c:url value="/assets/img/sql-activate-success.png"/>">
+                <img src="<c:url value="/assets/img/sql-activate-stacktrace-success.png"/>">
             </div>
 
             <div id="archive-account-expected-success" class="expected-result hide">
@@ -78,7 +78,7 @@
                     A <code>update</code> statement was triggered after the successful archiving of selected accounts.
                 </p>
 
-                <img src="<c:url value="/assets/img/sql-archive-success.png"/>">
+                <img src="<c:url value="/assets/img/sql-archive-stacktrace-success.png"/>">
             </div>
 
             <div id="delete-account-expected-success" class="expected-result hide">
@@ -88,7 +88,7 @@
                     A <code>delete</code> statement was triggered after the successful deletion of selected accounts.
                 </p>
 
-                <img src="<c:url value="/assets/img/sql-delete-success.png"/>">
+                <img src="<c:url value="/assets/img/sql-delete-stacktrace-success.png"/>">
             </div>
         </section>
 
@@ -96,8 +96,8 @@
             <div class="page-header">
                 <h1>What Next?</h1>
             </div>
-            <p class="lead">We can also monitor sql statement including the result set. Click on the button below for the next demonstration.</p>
-            <a class="btn btn-success btn-large" href="<c:url value="/sql/"><c:param name="type" value="data"/></c:url> ">SQL Result Set Demo &raquo;</a>
+            <p class="lead">Next step is to create your own sql monitors. You can customize your monitor by specifying sql preferences.</p>
+            <a class="btn btn-success btn-large" href="http://piraso.org/user-guide.html">Client User Guide &raquo;</a>
         </section>
     </div>
 </div>

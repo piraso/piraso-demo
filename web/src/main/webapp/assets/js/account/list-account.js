@@ -37,8 +37,6 @@
                     }
                 }
 
-                $("#load-account-expected-success").show("fade");
-
                 tableSize = $("#list-tbody input").length;
                 _initCheckBoxes();
             } else {
@@ -124,6 +122,8 @@
 
     loadButton.click(function() {
         loadButton.button('loading');
+        $(".expected-result").hide("fade");
+
         $("#load-account-expected-success").show("fade");
 
         new LoadAccounts().invoke();
@@ -131,6 +131,8 @@
 
     reloadButton.click(function() {
         reloadButton.button('loading');
+        $(".expected-result").hide("fade");
+
         $("#load-account-expected-success").show("fade");
 
         new LoadAccounts().invoke();
@@ -159,16 +161,19 @@
         var ACTIONS = {
             "activate": {
                "url": window.ACTIVATE_ACCOUNTS_URL,
-               "message": "activated"
+               "message": "activated",
+               "expected": "activate-account-expected-success"
             },
-
             "archive": {
                "url": window.ARCHIVE_ACCOUNTS_URL,
-               "message": "archived"
+               "message": "archived",
+                "expected": "archive-account-expected-success"
             },
             "delete": {
                 "url": window.DELETE_ACCOUNTS_URL,
-                "message": "deleted"
+                "message": "deleted",
+                "expected": "delete-account-expected-success"
+
             }
         };
 
@@ -177,6 +182,7 @@
 
             $("#list-form-alert-success").find("span.action").text(ACTIONS[action].message);
             $("#list-form-alert-success").show("fade");
+            $("#" + ACTIONS[action].expected).show("fade");
         };
 
         return {
@@ -189,6 +195,8 @@
 
                     data += "names=" +  encodeURIComponent(selection[i]);
                 }
+
+                $(".expected-result").hide("fade");
 
                 $.ajax({
                     async: false,

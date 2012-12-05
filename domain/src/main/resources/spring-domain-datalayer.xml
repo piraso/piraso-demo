@@ -22,7 +22,7 @@
     <property name="forceMigrate" value="true"/>
   </bean>
 
-  <bean id="accountDao" class="org.piraso.domain.dao.AccountDaoImpl"
+  <bean id="accountDao" class="org.piraso.demo.domain.dao.AccountDaoImpl"
         parent="baseDao"/>
 
 </beans>

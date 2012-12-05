@@ -1,9 +1,8 @@
-package org.piraso.domain.dao;
+package org.piraso.demo.domain.dao;
 
 import org.piraso.core.dao.BaseDao;
-import org.piraso.domain.entity.Account;
-import org.piraso.domain.entity.AccountStatus;
-import org.piraso.core.dao.BaseDao;
+import org.piraso.demo.domain.entity.Account;
+import org.piraso.demo.domain.entity.AccountStatus;
 
 import java.util.List;
 

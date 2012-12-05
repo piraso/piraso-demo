@@ -41,6 +41,12 @@
             <img src="<c:url value='/assets/img/log4j-thirdparty-monitor-menu.png'/>" alt="">
             </p>
 
+            <p><span class="badge badge-important">3</span> Wait for Piraso client to connect, then proceed.</p>
+
+            <p style="margin-left: 25px;">
+                <img src="<c:url value='/assets/img/connectivity.png'/>" alt="">
+            </p>
+
             <h3>Proceed Demo</h3>
 
             <p>Clicking on Proceed Demo will execute the logging codes above.</p>

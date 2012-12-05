@@ -1,6 +1,6 @@
-package org.piraso.domain.vo;
+package org.piraso.demo.domain.vo;
 
-import org.piraso.domain.entity.AccountStatus;
+import org.piraso.demo.domain.entity.AccountStatus;
 
 import java.util.Date;
 import java.util.UUID;

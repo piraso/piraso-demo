@@ -36,6 +36,12 @@
                 <img src="<c:url value='/assets/img/sql-statement-monitor-menu.png'/>" alt="">
             </p>
 
+            <p><span class="badge badge-important">3</span> Wait for Piraso client to connect, then proceed.</p>
+
+            <p style="margin-left: 25px;">
+                <img src="<c:url value='/assets/img/connectivity.png'/>" alt="">
+            </p>
+
             <h3>Proceed Demo</h3>
 
             <p>Click on the button below to proceed with the demo.</p>

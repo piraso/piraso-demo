@@ -1,8 +1,8 @@
-package org.piraso.domain.service;
+package org.piraso.demo.domain.service;
 
 import org.piraso.core.carbonfive.Carbon5AbstractDataDrivenTest;
-import org.piraso.domain.vo.AccountVO;
-import org.piraso.domain.vo.AccountVOBuilder;
+import org.piraso.demo.domain.vo.AccountVO;
+import org.piraso.demo.domain.vo.AccountVOBuilder;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;

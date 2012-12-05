@@ -6,7 +6,7 @@
         <h1><fmt:message key="overview"/></h1>
     </div>
     <p class="lead">
-        This demonstrate how Piraso was able to capture the application sql executions.
+        This demonstrate how Piraso was able to capture the sql executions from a web application.
     </p>
 
     <h3>Account Management</h3>

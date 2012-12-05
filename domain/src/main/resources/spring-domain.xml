@@ -19,7 +19,7 @@
 
   <bean id="accountManagementService" parent="abstractTxBean">
     <property name="target">
-      <bean class="org.piraso.domain.service.AccountManagementServiceImpl">
+      <bean class="org.piraso.demo.domain.service.AccountManagementServiceImpl">
         <property name="mapper" ref="dozer"/>
         <property name="accountDao" ref="accountDao"/>
       </bean>

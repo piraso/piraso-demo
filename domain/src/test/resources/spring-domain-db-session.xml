@@ -63,7 +63,7 @@
     <!-- Scan for entities and mappings -->
     <property name="packagesToScan">
       <list>
-        <value>org.piraso.domain.entity</value>
+        <value>org.piraso.demo.domain.entity</value>
       </list>
     </property>
 

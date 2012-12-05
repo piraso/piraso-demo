@@ -14,10 +14,10 @@
 
         <section id="expected">
             <div class="page-header">
-                <h1><fmt:message key="expected"/></h1>
+                <h1><i class="icon-star-empty"></i> <fmt:message key="expected"/></h1>
             </div>
             <p class="lead">
-                Here is what to be expected from the Piraso client platform.
+                After the page is loaded, here is what to be expected to appear from Piraso client platform.
                 Switch back to piraso client platform and you'll see the results specified below.
             </p>
 

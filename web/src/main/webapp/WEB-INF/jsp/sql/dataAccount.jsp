@@ -56,9 +56,10 @@
 
                 <p>
                     A <code>select</code> statement was triggered after the successful loading of accounts.
+                    This also list the resultset data.
                 </p>
 
-                <img src="<c:url value="/assets/img/sql-list-load-success.png"/>">
+                <img src="<c:url value="/assets/img/sql-resultset-list-success.png"/>">
             </div>
 
             <div id="activate-account-expected-success" class="expected-result hide">
@@ -96,8 +97,12 @@
             <div class="page-header">
                 <h1>What Next?</h1>
             </div>
-            <p class="lead">We can also monitor sql statement including the result set. Click on the button below for the next demonstration.</p>
-            <a class="btn btn-success btn-large" href="<c:url value="/sql/"><c:param name="type" value="data"/></c:url> ">SQL Result Set Demo &raquo;</a>
+            <p class="lead">
+                We can also monitor sql statements with method stack trace.
+                This will help us determine which class invokes that causes the SQL statement to be executed.
+                Click on the button below for the next demonstration.
+            </p>
+            <a class="btn btn-success btn-large" href="<c:url value="/sql/"><c:param name="type" value="stacktrace"/></c:url> ">SQL Method Stack trace Demo &raquo;</a>
         </section>
     </div>
 </div>

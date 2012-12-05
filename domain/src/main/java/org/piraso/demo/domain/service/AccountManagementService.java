@@ -1,7 +1,6 @@
-package org.piraso.domain.service;
+package org.piraso.demo.domain.service;
 
-import org.piraso.domain.vo.AccountVO;
-import org.piraso.domain.vo.AccountVO;
+import org.piraso.demo.domain.vo.AccountVO;
 
 import java.util.List;
 

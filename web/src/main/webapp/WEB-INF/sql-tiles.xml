@@ -39,5 +39,17 @@
     <put-attribute name="body" value="/WEB-INF/jsp/sql/dataAccount.jsp"/>
   </definition>
 
+  <definition name=".sql.stacktrace" extends=".sql">
+    <put-attribute name="subTitle" value="sql.stacktrace.title" type="string"/>
+  </definition>
+
+  <definition name="sql.stacktrace.home" extends=".sql.stacktrace">
+    <put-attribute name="body" value="/WEB-INF/jsp/sql/stacktraceHome.jsp"/>
+  </definition>
+
+  <definition name="sql.stacktrace.accounts" extends=".sql.stacktrace">
+    <put-attribute name="body" value="/WEB-INF/jsp/sql/stacktraceAccount.jsp"/>
+  </definition>
+
 
 </tiles-definitions>

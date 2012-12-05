@@ -1,17 +1,14 @@
-package org.piraso.domain.dao;
+package org.piraso.demo.domain.dao;
 
 import org.piraso.core.dao.BaseDaoImpl;
-import org.piraso.domain.entity.Account;
-import org.piraso.domain.entity.AccountStatus;
+import org.piraso.demo.domain.entity.Account;
+import org.piraso.demo.domain.entity.AccountStatus;
 import org.hibernate.HibernateException;
 import org.hibernate.SQLQuery;
 import org.hibernate.Session;
 import org.hibernate.criterion.DetachedCriteria;
 import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Restrictions;
-import org.piraso.core.dao.BaseDaoImpl;
-import org.piraso.domain.entity.Account;
-import org.piraso.domain.entity.AccountStatus;
 import org.springframework.orm.hibernate3.HibernateCallback;
 
 import java.sql.SQLException;

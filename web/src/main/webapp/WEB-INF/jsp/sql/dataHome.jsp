@@ -6,9 +6,7 @@
 <div class="row">
     <div class="span3 bs-docs-sidebar">
         <ul class="nav nav-list bs-docs-sidenav">
-            <li><a href="#log4j-overview"><i class="icon-chevron-right"></i> <fmt:message key="overview"/></a></li>
-            <li><a href="#log4j-properties"><i class="icon-chevron-right"></i> Log4j Properties</a></li>
-            <li><a href="#log4j-logging"><i class="icon-chevron-right"></i> Logging code snippet</a></li>
+            <li><a href="#sql-overview"><i class="icon-chevron-right"></i> <fmt:message key="overview"/></a></li>
             <li><a href="#start"><i class="icon-chevron-right"></i> <fmt:message key="start.demo"/></a></li>
         </ul>
     </div>
@@ -20,7 +18,9 @@
             <div class="page-header">
                 <h1><fmt:message key="start.demo"/></h1>
             </div>
-            <p class="lead">This will demonstrate log4j monitoring for <code>DEBUG</code> levels in <code>demo</code> loggers. Follow the steps provided before continuing.</p>
+            <p class="lead">
+                This will demonstrate SQL statements including result sets monitoring. Follow the steps provided before continuing.
+            </p>
 
             <h3>Instructions</h3>
 
@@ -29,11 +29,11 @@
             </p>
 
             <p><span class="badge badge-success">1</span> Open Piraso client platform.</p>
-            <p><span class="badge badge-info">2</span> Click on <code>File > New Monitor Instance > Monitor: [DEMO] - log4j - debug levels</code>.</p>
+            <p><span class="badge badge-info">2</span> Click on <code>File > New Monitor Instance > Monitor: [DEMO] - sql - resultset</code>.</p>
 
             <p>
                 <img src="<c:url value='/assets/img/new-monitor.png'/>" alt="">
-                <img src="<c:url value='/assets/img/log4j-debug-monitor-menu.png'/>" alt="">
+                <img src="<c:url value='/assets/img/sql-resultset-monitor-menu.png'/>" alt="">
             </p>
 
             <p><span class="badge badge-important">3</span> Wait for Piraso client to connect, then proceed.</p>
@@ -44,9 +44,9 @@
 
             <h3>Proceed Demo</h3>
 
-            <p>Clicking on Proceed Demo will execute the logging codes above.</p>
+            <p>Click on the button below to proceed with the demo.</p>
 
-            <a class="btn btn-success btn-large" href="<c:url value="/log4j/logs"><c:param name="type" value="${param['type']}"/></c:url> ">Proceed Demo &raquo;</a>
+            <a class="btn btn-success btn-large" href="<c:url value="/sql/accounts"><c:param name="type" value="${param['type']}"/></c:url> ">Proceed Demo &raquo;</a>
         </section>
     </div>
 </div>
