@@ -1,6 +1,6 @@
 package org.piraso.domain.service;
 
-import com.piraso.core.carbonfive.Carbon5AbstractDataDrivenTest;
+import org.piraso.core.carbonfive.Carbon5AbstractDataDrivenTest;
 import org.piraso.domain.vo.AccountVO;
 import org.piraso.domain.vo.AccountVOBuilder;
 import org.junit.Test;
