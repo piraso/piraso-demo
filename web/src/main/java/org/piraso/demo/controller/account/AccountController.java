@@ -1,8 +1,8 @@
 package org.piraso.demo.controller.account;
 
-import com.piraso.domain.service.AccountManagementService;
-import com.piraso.domain.vo.AccountVO;
-import com.piraso.domain.vo.AccountVOBuilder;
+import org.piraso.domain.service.AccountManagementService;
+import org.piraso.domain.vo.AccountVO;
+import org.piraso.domain.vo.AccountVOBuilder;
 import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Logger;
 import org.dozer.Mapper;

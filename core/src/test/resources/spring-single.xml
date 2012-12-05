@@ -81,13 +81,13 @@
     <!-- Scan for entities and mappings -->
     <property name="packagesToScan">
       <list>
-        <value>com.piraso.core.sample.beans</value>
+        <value>org.piraso.core.sample.beans</value>
       </list>
     </property>
 
   </bean>
 
-  <bean id="baseDao" class="com.piraso.core.dao.BaseDaoImpl"
+  <bean id="baseDao" class="org.piraso.core.dao.BaseDaoImpl"
         abstract="true">
     <property name="hibernateTemplate" ref="hibernateTemplate"/>
     <property name="jdbcTemplate" ref="jdbcTemplate"/>
@@ -117,20 +117,20 @@
     <constructor-arg value="h2Default"/>
   </bean>
 
-  <bean id="schemaCreator" class="com.piraso.core.dbmigrator.SchemaCreator" init-method="create">
+  <bean id="schemaCreator" class="org.piraso.core.dbmigrator.SchemaCreator" init-method="create">
     <constructor-arg index="0" ref="jdbcTemplate"/>
     <constructor-arg index="1" ref="schemaName"/>
   </bean>
 
-  <bean id="dataSourceSelector" class="com.piraso.core.dbmigrator.SingleDataSourceSelector">
+  <bean id="dataSourceSelector" class="org.piraso.core.dbmigrator.SingleDataSourceSelector">
     <constructor-arg ref="dataSource"/>
   </bean>
 
-  <bean id="migrationResolver" class="com.piraso.core.dbmigrator.DefaultResourceMigrationResolver"/>
+  <bean id="migrationResolver" class="org.piraso.core.dbmigrator.DefaultResourceMigrationResolver"/>
   <bean id="versionStrategy" class="com.carbonfive.db.migration.SimpleVersionStrategy"/>
 
   <!--  DB Migrations setup for delivery_* tables. -->
-  <bean id="migrationManager" class="com.piraso.core.dbmigrator.SingleDataSourceMigrationManager"
+  <bean id="migrationManager" class="org.piraso.core.dbmigrator.SingleDataSourceMigrationManager"
         init-method="migrate">
     <property name="dataSourceSelector" ref="dataSourceSelector"/>
     <property name="migrationResolver" ref="migrationResolver"/>
@@ -139,7 +139,7 @@
     <property name="forceMigrate" ref="testContext"/>
   </bean>
 
-  <bean id="audienceSchemeDao" class="com.piraso.core.sample.dao.TestEntityDaoImpl"
+  <bean id="audienceSchemeDao" class="org.piraso.core.sample.dao.TestEntityDaoImpl"
         parent="baseDao"/>
 
 </beans>

@@ -6,14 +6,14 @@
        default-lazy-init="false" default-dependency-check="none"
        default-autowire="no">
 
-  <bean id="dataSourceSelector" class="com.piraso.core.dbmigrator.SingleDataSourceSelector">
+  <bean id="dataSourceSelector" class="org.piraso.core.dbmigrator.SingleDataSourceSelector">
     <constructor-arg ref="dataSource"/>
   </bean>
 
-  <bean id="migrationResolver" class="com.piraso.core.dbmigrator.DefaultResourceMigrationResolver"/>
+  <bean id="migrationResolver" class="org.piraso.core.dbmigrator.DefaultResourceMigrationResolver"/>
   <bean id="versionStrategy" class="com.carbonfive.db.migration.SimpleVersionStrategy"/>
 
-  <bean id="migrationManager" class="com.piraso.core.dbmigrator.SingleDataSourceMigrationManager"
+  <bean id="migrationManager" class="org.piraso.core.dbmigrator.SingleDataSourceMigrationManager"
         init-method="migrate">
     <property name="dataSourceSelector" ref="dataSourceSelector"/>
     <property name="migrationResolver" ref="migrationResolver"/>
@@ -22,7 +22,7 @@
     <property name="forceMigrate" value="true"/>
   </bean>
 
-  <bean id="accountDao" class="com.piraso.domain.dao.AccountDaoImpl"
+  <bean id="accountDao" class="org.piraso.domain.dao.AccountDaoImpl"
         parent="baseDao"/>
 
 </beans>

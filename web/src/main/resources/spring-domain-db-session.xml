@@ -62,13 +62,13 @@
     <!-- Scan for entities and mappings -->
     <property name="packagesToScan">
       <list>
-        <value>com.piraso.domain.entity</value>
+        <value>org.piraso.domain.entity</value>
       </list>
     </property>
 
   </bean>
 
-  <bean id="baseDao" class="com.piraso.core.dao.BaseDaoImpl"
+  <bean id="baseDao" class="org.piraso.core.dao.BaseDaoImpl"
         abstract="true">
     <property name="hibernateTemplate" ref="hibernateTemplate"/>
     <property name="jdbcTemplate" ref="jdbcTemplate"/>

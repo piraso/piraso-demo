@@ -6,7 +6,7 @@
 
   <configuration>
     <custom-converters>
-      <converter type="com.piraso.core.dozer.EnumStringBiDirectionalConverter">
+      <converter type="org.piraso.core.dozer.EnumStringBiDirectionalConverter">
         <class-a>java.lang.String</class-a>
         <class-b>java.lang.Enum</class-b>
       </converter>
