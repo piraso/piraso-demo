@@ -234,3 +234,20 @@ input[type="radio"], input[type="checkbox"] {
 .table tbody tr.active td {
     background-color: #feffe7;
 }
+
+table#list-table p.text-error {
+    color: #B94A48;
+    font-weight: bold;
+}
+
+table#list-table td.status-inactive {
+    color: #999999;
+}
+
+table#list-table td.status-active {
+    color: #468847;
+}
+
+table#list-table td.status-archive {
+    color: #B94A48;
+}

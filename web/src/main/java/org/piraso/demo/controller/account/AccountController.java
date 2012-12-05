@@ -1,11 +1,11 @@
 package org.piraso.demo.controller.account;
 
-import org.piraso.domain.service.AccountManagementService;
-import org.piraso.domain.vo.AccountVO;
-import org.piraso.domain.vo.AccountVOBuilder;
 import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Logger;
 import org.dozer.Mapper;
+import org.piraso.domain.service.AccountManagementService;
+import org.piraso.domain.vo.AccountVO;
+import org.piraso.domain.vo.AccountVOBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CookieValue;
@@ -77,5 +77,68 @@ public class AccountController {
         }
 
         return response;
+    }
+
+    @ResponseBody
+    @RequestMapping("/activate")
+    public AccountListResponse activate(@ModelAttribute AccountSelection selection, @CookieValue("JSESSIONID") String sessionID) {
+        LOG.info(String.format("Activating accounts '%s' for session '%s'.", selection.getNames(), sessionID));
+
+        AccountListResponse response = new AccountListResponse();
+
+        try {
+            int result = service.activate(sessionID, selection.getNames());
+
+            LOG.info(String.format("There are %d account activated.", result));
+        } catch(Exception e) {
+            LOG.error("Error while creating account.", e);
+            response.setStatus(StatusResponse.FAILED);
+
+            return response;
+        }
+
+        return list(sessionID);
+    }
+
+    @ResponseBody
+    @RequestMapping("/archive")
+    public AccountListResponse archive(@ModelAttribute AccountSelection selection, @CookieValue("JSESSIONID") String sessionID) {
+        LOG.info(String.format("Activating accounts '%s' for session '%s'.", selection.getNames(), sessionID));
+
+        AccountListResponse response = new AccountListResponse();
+
+        try {
+            int result = service.archive(sessionID, selection.getNames());
+
+            LOG.info(String.format("There are %d account archived.", result));
+        } catch(Exception e) {
+            LOG.error("Error while creating account.", e);
+            response.setStatus(StatusResponse.FAILED);
+
+            return response;
+        }
+
+        return list(sessionID);
+    }
+
+    @ResponseBody
+    @RequestMapping("/delete")
+    public AccountListResponse delete(@ModelAttribute AccountSelection selection, @CookieValue("JSESSIONID") String sessionID) {
+        LOG.info(String.format("Activating accounts '%s' for session '%s'.", selection.getNames(), sessionID));
+
+        AccountListResponse response = new AccountListResponse();
+
+        try {
+            int result = service.delete(sessionID, selection.getNames());
+
+            LOG.info(String.format("There are %d account deleted.", result));
+        } catch(Exception e) {
+            LOG.error("Error while creating account.", e);
+            response.setStatus(StatusResponse.FAILED);
+
+            return response;
+        }
+
+        return list(sessionID);
     }
 }
