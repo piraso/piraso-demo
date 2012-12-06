@@ -29,10 +29,10 @@
             <h3>Instructions</h3>
 
             <p>
-            Please follow these Piraso client platform instructions.
+            Please follow these Piraso client instructions.
             </p>
 
-            <p><span class="badge badge-success">1</span> Open Piraso client platform.</p>
+            <p><span class="badge badge-success">1</span> Open Piraso client application.</p>
             <p><span class="badge badge-info">2</span> Click on <code>File > New Monitor Instance > Monitor: [DEMO] - log4j - security - info levels</code>.</p>
 
             <p>
