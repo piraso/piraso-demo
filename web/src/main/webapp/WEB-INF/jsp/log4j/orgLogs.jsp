@@ -49,9 +49,9 @@
             <div class="page-header">
                 <h1>What Next?</h1>
             </div>
-            <p class="lead">Next step is to create your own log4j monitor. You can customize your monitor by specifying log4j preferences.</p>
-            <a class="btn btn-primary btn-large" href="http://piraso.org/user-guide.html">Client User Guide &raquo;</a>
-            <a class="btn btn-large" style="margin-left: 5px;" href="<c:url value='/sql/'><c:param name="type" value="queries"/></c:url>">SQL Executions &raquo;</a>
+            <p class="lead">You can also check for the SQL Execution live demo. You can also start checking the client user guide.</p>
+            <a class="btn btn-large" href="<c:url value='/sql/'><c:param name="type" value="queries"/></c:url>">SQL Executions &raquo;</a>
+            <a class="btn btn-primary btn-large" style="margin-left: 5px;" href="http://piraso.org/user-guide.html">Client User Guide &raquo;</a>
         </section>
 
         <jsp:include page="../common/comments.jsp"/>
