@@ -78,14 +78,15 @@
     };
 
     var refreshButtons = function() {
-        var collector = new SchemeCollector();
+      var collector = new SchemeCollector();
+      var $accountCheckbox = $(".account-checkbox");
 
-        $(".account-checkbox").each(collector.handler);
-        $(".account-checkbox").each(new EachRowSelector());
+      $accountCheckbox.each(collector.handler);
+      $accountCheckbox.each(new EachRowSelector());
 
-        $("#list-form-activate")[0].disabled = !collector.hasSelection();
-        $("#list-form-archive")[0].disabled = !collector.hasSelection();
-        $("#list-form-delete")[0].disabled = !collector.hasSelection();
+      $("#list-form-activate")[0].disabled = !collector.hasSelection();
+      $("#list-form-archive")[0].disabled = !collector.hasSelection();
+      $("#list-form-delete")[0].disabled = !collector.hasSelection();
     };
 
     var EachRowSelector = function() {
@@ -178,11 +179,13 @@
         };
 
         var _successCallback = function(json) {
-            _loadTable(json);
+          _loadTable(json);
 
-            $("#list-form-alert-success").find("span.action").text(ACTIONS[action].message);
-            $("#list-form-alert-success").show("fade");
-            $("#" + ACTIONS[action].expected).show("fade");
+          var $alertSuccess = $("#list-form-alert-success");
+          $alertSuccess.show("fade");
+          $alertSuccess.find("span.action").text(ACTIONS[action].message);
+          $("#" + ACTIONS[action].expected).show("fade");
+          refreshButtons();
         };
 
         return {

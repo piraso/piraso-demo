@@ -24,7 +24,7 @@
 
             <jsp:include page="../account/add-account.jsp" />
 
-            <div id="add-account-expected-failed" class="expected-result hide">
+            <div id="add-account-expected-failed" class="hide">
                 <h3><i class="icon-star-empty"></i> Expected Results</h3>
 
                 <p>
@@ -34,7 +34,7 @@
                 <img src="<c:url value="/assets/img/sql-add-stacktrace-failed.png"/>">
             </div>
 
-            <div id="add-account-expected-success" class="expected-result hide">
+            <div id="add-account-expected-success" class="hide">
                 <h3><i class="icon-star-empty"></i> Expected Results</h3>
 
                 <p>

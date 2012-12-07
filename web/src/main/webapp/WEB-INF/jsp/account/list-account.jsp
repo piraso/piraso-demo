@@ -22,13 +22,6 @@
 
 <div id="list-container" class="hide">
 
-    <p>
-        <button id="list-form-reload" type="button" class="btn btn-primary" data-loading-text="Reloading accounts...">Reload Accounts</button>
-        <button id="list-form-activate" type="button" class="btn btn-success" data-loading-text="Activating selected accounts..." disabled="disabled">Bulk Activate</button>
-        <button id="list-form-archive" type="button" class="btn btn-warning" data-loading-text="Achieving selected accounts..." disabled="disabled">Bulk Archive</button>
-        <button id="list-form-delete" type="button" class="btn btn-danger" data-loading-text="Deleting selected accounts..." disabled="disabled">Bulk Delete</button>
-    </p>
-
     <div id="list-form-alert-success" class="alert alert-success hide">
         <button class="close close-confirmation" type="button">&times;</button>
         <div class="alert-content"><strong>Success!</strong> Selected accounts was successfully <span class="action"></span>.</div>
@@ -51,6 +44,13 @@
         <tbody id="list-tbody">
         </tbody>
     </table>
+
+    <div class="form-actions">
+        <button id="list-form-reload" type="button" class="btn btn-primary" data-loading-text="Reloading accounts...">Reload Accounts</button>
+        <button id="list-form-activate" type="button" class="btn btn-success" data-loading-text="Activating selected accounts..." disabled="disabled">Bulk Activate</button>
+        <button id="list-form-archive" type="button" class="btn btn-warning" data-loading-text="Achieving selected accounts..." disabled="disabled">Bulk Archive</button>
+        <button id="list-form-delete" type="button" class="btn btn-danger" data-loading-text="Deleting selected accounts..." disabled="disabled">Bulk Delete</button>
+    </div>
 </div>
 
 <scripts:in>
