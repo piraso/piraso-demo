@@ -19,7 +19,7 @@
             </div>
             <p class="lead">
                 After the page is loaded, here is what to be expected to appear from Piraso client platform.
-                Switch back to piraso client platform and you'll see the results specified below.
+                Switch back to piraso client and you'll see the results specified below.
             </p>
 
             <h3>Monitor Results</h3>
@@ -50,10 +50,10 @@
                 <h1>What Next?</h1>
             </div>
             <p class="lead">Next step is to create your own log4j monitor. You can customize your monitor by specifying log4j preferences.</p>
-            <a class="btn btn-success btn-large" href="http://piraso.org/user-guide.html">Client User Guide &raquo;</a>
+            <a class="btn btn-primary btn-large" href="http://piraso.org/user-guide.html">Client User Guide &raquo;</a>
+            <a class="btn btn-large" style="margin-left: 5px;" href="<c:url value='/sql/'><c:param name="type" value="queries"/></c:url>">SQL Executions &raquo;</a>
         </section>
 
         <jsp:include page="../common/comments.jsp"/>
-
     </div>
 </div>

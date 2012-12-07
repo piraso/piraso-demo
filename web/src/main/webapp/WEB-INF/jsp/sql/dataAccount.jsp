@@ -103,7 +103,7 @@
                 This will help us determine which class invokes that causes the SQL statement to be executed.
                 Click on the button below for the next demonstration.
             </p>
-            <a class="btn btn-success btn-large" href="<c:url value="/sql/"><c:param name="type" value="stacktrace"/></c:url> ">SQL Method Stack trace Demo &raquo;</a>
+            <a class="btn btn-primary btn-large" href="<c:url value="/sql/"><c:param name="type" value="stacktrace"/></c:url> ">SQL Method Stack trace Demo &raquo;</a>
         </section>
 
         <jsp:include page="../common/comments.jsp"/>

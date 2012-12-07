@@ -98,7 +98,7 @@
                 <h1>What Next?</h1>
             </div>
             <p class="lead">Next step is to create your own sql monitors. You can customize your monitor by specifying sql preferences.</p>
-            <a class="btn btn-success btn-large" href="http://piraso.org/user-guide.html">Client User Guide &raquo;</a>
+            <a class="btn btn-primary btn-large" href="http://piraso.org/user-guide.html">Client User Guide &raquo;</a>
         </section>
 
         <jsp:include page="../common/comments.jsp"/>

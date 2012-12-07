@@ -19,7 +19,7 @@
                 <h1><i class="icon-star-empty"></i> <fmt:message key="expected"/></h1>
             </div>
             <p class="lead">
-                Here is what to be expected from the Piraso client platform.
+                Here is what to be expected from the Piraso client.
                 After the page is loaded, here is what to be expected to appear from Piraso client platform.
             </p>
 
@@ -40,7 +40,7 @@
                 <h1>What Next?</h1>
             </div>
             <p class="lead">We can also monitor log4j for third party loggers. Click on the button below for the next demonstration.</p>
-            <a class="btn btn-success btn-large" href="<c:url value="/log4j/"><c:param name="type" value="org"/></c:url> ">Third Party Logger Demo &raquo;</a>
+            <a class="btn btn-primary btn-large" href="<c:url value="/log4j/"><c:param name="type" value="org"/></c:url> ">Third Party Logger Demo &raquo;</a>
         </section>
 
         <jsp:include page="../common/comments.jsp"/>

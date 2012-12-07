@@ -19,7 +19,7 @@
             </div>
             <p class="lead">
                 After the page is loaded, here is what to be expected to appear from Piraso client platform.
-                Switch back to piraso client platform and you'll see the results specified below.
+                Switch back to piraso client and you'll see the results specified below.
             </p>
 
             <h3>Monitor Results</h3>
@@ -38,7 +38,7 @@
                 <h1>What Next?</h1>
             </div>
             <p class="lead">We can also monitor log4j with ERROR or WARNING log levels. Click on the button below for the next demonstration.</p>
-            <a class="btn btn-success btn-large" href="<c:url value="/log4j/"><c:param name="type" value="error"/></c:url> ">Error and Warning Level Demo &raquo;</a>
+            <a class="btn btn-primary btn-large" href="<c:url value="/log4j/"><c:param name="type" value="error"/></c:url> ">Error and Warning Level Demo &raquo;</a>
         </section>
 
         <jsp:include page="../common/comments.jsp"/>
