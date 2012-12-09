@@ -27,6 +27,46 @@
     <war.name>piraso-demo-web</war.name>
   </properties>
 
+  <pluginRepositories>
+    <pluginRepository>
+      <id>sonatype-nexus-snapshots</id>
+      <name>Sonatype Nexus Snapshots</name>
+      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+    </pluginRepository>
+  </pluginRepositories>
+
+  <profiles>
+    <profile>
+      <id>piraso</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.piraso</groupId>
+            <artifactId>piraso-maven-plugin</artifactId>
+            <version>${piraso.version}</version>
+          </plugin>
+        </plugins>
+      </build>
+      <dependencies>
+        <dependency>
+          <groupId>org.piraso</groupId>
+          <artifactId>piraso-spring-web-server</artifactId>
+          <version>${piraso.version}</version>
+        </dependency>
+        <dependency>
+          <groupId>org.piraso</groupId>
+          <artifactId>log4j-context-logger-server</artifactId>
+          <version>${piraso.version}</version>
+        </dependency>
+        <dependency>
+          <groupId>org.piraso</groupId>
+          <artifactId>sql-context-logger-server</artifactId>
+          <version>${piraso.version}</version>
+        </dependency>
+      </dependencies>
+    </profile>
+  </profiles>
+
   <build>
     <finalName>${war.name}</finalName>
     <resources>
@@ -63,21 +103,6 @@
         </includes>
       </testResource>
     </testResources>
-    <plugins>
-      <plugin>
-        <groupId>org.piraso</groupId>
-        <artifactId>piraso-maven-plugin</artifactId>
-        <version>${piraso.version}</version>
-        <executions>
-          <execution>
-            <phase>process-resources</phase>
-            <goals>
-              <goal>web-xml</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-    </plugins>
   </build>
 
   <dependencies>
@@ -221,22 +246,6 @@
       <groupId>org.piraso</groupId>
       <artifactId>piraso-demo-domain</artifactId>
       <version>${project.version}</version>
-    </dependency>
-
-    <dependency>
-      <groupId>org.piraso</groupId>
-      <artifactId>piraso-spring-web-server</artifactId>
-      <version>${piraso.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.piraso</groupId>
-      <artifactId>log4j-context-logger-server</artifactId>
-      <version>${piraso.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.piraso</groupId>
-      <artifactId>sql-context-logger-server</artifactId>
-      <version>${piraso.version}</version>
     </dependency>
   </dependencies>
 </project>
