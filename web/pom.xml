@@ -38,6 +38,9 @@
   <profiles>
     <profile>
       <id>piraso</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
       <build>
         <plugins>
           <plugin>
