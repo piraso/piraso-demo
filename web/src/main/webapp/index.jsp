@@ -90,7 +90,7 @@
     <div class="row about">
         <div class="span4">
             <h3><i class="icon-bolt icon-large"></i> Easy to Setup</h3>
-            <p>Simply add the <a href="http://maven.apache.org/">maven</a> dependencies and include the plugin in your java web module to enable Piraso.</p>
+            <p>Enable your web application with a simple <a href="http://maven.apache.org/">maven</a> profile.</p>
         </div>
         <div class="span4">
             <h3><i class="icon-github icon-large"></i> Open Source</h3>

@@ -47,6 +47,13 @@
             <groupId>org.piraso</groupId>
             <artifactId>piraso-maven-plugin</artifactId>
             <version>${piraso.version}</version>
+            <executions>
+              <execution>
+                <goals>
+                  <goal>web-xml</goal>
+                </goals>
+              </execution>
+            </executions>
           </plugin>
         </plugins>
       </build>
