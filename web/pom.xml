@@ -60,7 +60,7 @@
       <dependencies>
         <dependency>
           <groupId>org.piraso</groupId>
-          <artifactId>piraso-spring-web-server</artifactId>
+          <artifactId>piraso-web-server</artifactId>
           <version>${piraso.version}</version>
         </dependency>
         <dependency>
