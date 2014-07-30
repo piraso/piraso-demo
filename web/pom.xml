@@ -50,7 +50,7 @@
             <executions>
               <execution>
                 <goals>
-                  <goal>web-xml</goal>
+                  <goal>piraso-war</goal>
                 </goals>
               </execution>
             </executions>
